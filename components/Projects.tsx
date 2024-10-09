@@ -7,7 +7,7 @@ import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
 import ProjectItem from './ProjectItem';
 
-const Projects = () => {
+const Projects:React.FC = () => {
   return (
     <div id='projects' className='w-full'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>

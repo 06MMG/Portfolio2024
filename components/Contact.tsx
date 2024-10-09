@@ -1,13 +1,14 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.jpg';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -119,7 +120,7 @@ const Contact = () => {
                   <label className='uppercase text-sm py-2'>Message</label>
                   <textarea
                     className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='10'
+                    rows={10}
                     name='message'
                   ></textarea>
                 </div>
