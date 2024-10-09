@@ -17,7 +17,7 @@ const Main: React.FC = () => {
             Let's Build Something Amazing Together
           </p>
           <h1 className="py-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937] animate-slide-left">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1]">Clint</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1]">Muzamil</span>
           </h1>
           <h2 className="py-2 text-xl sm:text-2xl md:text-3xl font-light text-[#374151] animate-slide-left delay-75">
             A Passionate Front-End Web Developer
