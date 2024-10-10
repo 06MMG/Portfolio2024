@@ -5,24 +5,30 @@ import { StaticImageData } from 'next/image'
 
 interface ProjectItemProps {
   title: string;
-  backgroundImg: StaticImageData
+  backgroundImg: StaticImageData;
   tech: string;
   projectUrl: string;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = ({title, backgroundImg, tech, projectUrl}) => {
+const ProjectItem: React.FC<ProjectItemProps> = ({ title, backgroundImg, tech, projectUrl }) => {
   return (
-    <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
-    <Image className='rounded-xl group-hover:opacity-10' src={backgroundImg} alt='/' /> 
-    <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-        <h3 className='text-2xl text-white tracking-wider text-center'>{title}</h3>
-        <p className='pb-4 pt-2 text-white text-center'>{tech}</p>
+    <div className='relative flex items-center justify-center h-auto w-full shadow-lg rounded-xl overflow-hidden group transform hover:scale-[1.02] transition-transform duration-500'>
+      <Image 
+        className='w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:rotate-2 group-hover:scale-110' 
+        src={backgroundImg} 
+        alt='/' 
+      />
+      <div className='absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'>
+        <h3 className='text-3xl font-bold text-white tracking-wide'>{title}</h3>
+        <p className='text-lg text-gray-300 mt-2'>{tech}</p>
         <Link href={projectUrl}>
-            <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>More Info</p>
+          <p className='mt-4 px-6 py-3 rounded-full bg-white text-gray-800 font-semibold text-center cursor-pointer shadow-lg hover:bg-gray-300'>
+            View Project
+          </p>
         </Link>
+      </div>
     </div>
- </div>
-  )
-}
+  );
+};
 
-export default ProjectItem
+export default ProjectItem;
