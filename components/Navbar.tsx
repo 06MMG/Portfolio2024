@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import NavLogo from '../public/assets/navLogo.png';
+import avatar from '../public/assets/avatar.jpg';
+import navlogo from '../public/assets/navLogo.png'
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<boolean>(false);
@@ -39,38 +40,41 @@ const Navbar: React.FC = () => {
           : 'fixed w-full h-20 z-[100]'
       }
     >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Link href='/'>
-          <a>
-            <Image src={NavLogo} alt='/' width={125} height={50} className='cursor-pointer' />
-          </a>
-        </Link>
-        <div>
-          <ul style={{ color: linkColor }} className='hidden md:flex'>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Home</Link>
+      
+    <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+      <Link href='/'>
+        <a>
+          {/* Avatar Image */}
+          <Image
+            src={avatar} // Path to your avatar image
+            alt='avatar'
+            width={50}
+            height={50}
+            className='rounded-full cursor-pointer hover:scale-110 transition-transform duration-300'
+          />
+        </a>
+      </Link>
+      <div>
+        <ul style={{ color: linkColor }} className='hidden md:flex'>
+          {/* Navigation Links with animation */}
+          {navLinks.map((link, index) => (
+            <li key={index} className='ml-10 text-sm uppercase relative'>
+              <Link href={link.href}>
+                <a className='hover:text-yellow-500 transition-all duration-300'>
+                  {link.name}
+                  <span className='absolute left-0 bottom-[-2px] h-[2px] w-0 bg-yellow-500 transition-all duration-300 hover:w-full'></span>
+                </a>
+              </Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#about'>About</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#skills'>Skills</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#projects'>Projects</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/resume'>Resume</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#contact'>Contact</Link>
-            </li>
-          </ul>
-          <div style={{ color: linkColor }} onClick={handleNav} className='md:hidden'>
-            <AiOutlineMenu size={25} />
-          </div>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Icon */}
+        <div style={{ color: linkColor }} onClick={handleNav} className='md:hidden cursor-pointer'>
+          <AiOutlineMenu size={25} />
         </div>
       </div>
+    </div>
 
       {/* Mobile Menu */}
       <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
@@ -85,7 +89,13 @@ const Navbar: React.FC = () => {
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <a>
-                  <Image src={NavLogo} width={87} height={35} alt='/' />
+                <Image
+            src={avatar} // Path to your avatar image
+            alt='avatar'
+            width={50}
+            height={50}
+            className='rounded-full cursor-pointer hover:scale-110 transition-transform duration-300'
+          />
                 </a>
               </Link>
               <div
@@ -169,5 +179,14 @@ const Navbar: React.FC = () => {
     </div>
   );
 };
+
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/#about' },
+  { name: 'Skills', href: '/#skills' },
+  { name: 'Projects', href: '/#projects' },
+  { name: 'Resume', href: '/resume' },
+  { name: 'Contact', href: '/#contact' },
+];
 
 export default Navbar;

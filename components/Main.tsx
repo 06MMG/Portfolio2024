@@ -1,8 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import avatar from '../public/assets/avatar.jpg';
+
 
 const Main: React.FC = () => {
   return (
@@ -13,7 +16,7 @@ const Main: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-4 py-8 flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-12">
         {/* Left Column: Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <p className="uppercase text-xs sm:text-sm tracking-[0.15em] text-[#6A1B9A] animate-fade-in mt-12 sm:mt-16">
+          <p className="uppercase text-xs sm:text-sm tracking-[0.15em] text-[#6A1B9A] animate-fade-in mt-20 sm:mt-16">
             Let's Build Something Amazing Together
           </p>
           <h1 className="py-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937] animate-slide-left">
@@ -68,8 +71,8 @@ const Main: React.FC = () => {
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1] rounded-full animate-float overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
-              <img
-                src="/developer-avatar.svg"
+              <Image
+                src={avatar}
                 alt="Developer Avatar"
                 className="w-[90%] h-[90%] object-contain"
               />

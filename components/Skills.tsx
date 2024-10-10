@@ -21,14 +21,14 @@ const Skills: React.FC = () => {
           What I Excel At
         </h2>
 
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mt-8'>
           {skills.map(({ img, label }, index) => (
             <div
               key={index}
               className='p-6 shadow-xl rounded-xl bg-[#2b2f35] hover:bg-[#33373d] transform hover:scale-105 transition-transform duration-300 ease-in-out text-center text-white animate-fade-in'
             >
               <div className='m-auto'>
-                <Image src={img} width='64px' height='64px' alt={label} className='rounded-full' />
+                <Image src={img} width={64} height={64} alt={label} className='rounded-full' />
               </div>
               <h3 className='text-lg font-semibold mt-4'>{label}</h3>
             </div>
@@ -52,4 +52,5 @@ const skills = [
 ];
 
 export default Skills;
+
 
