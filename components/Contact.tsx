@@ -1,7 +1,6 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
-import React,{ useState } from 'react';
+import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -10,41 +9,41 @@ import ContactImg from '../public/assets/contact.jpg';
 
 const Contact: React.FC = () => {
   return (
-    <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
+    <div id='contact' className='w-full py-8'>
+      <div className='max-w-[900px] mx-auto px-2 py-8'>
+        <p className='text-sm tracking-wider uppercase text-[#5651e5] text-center'>
           Contact
         </p>
-        <h2 className='py-4'>Get In Touch</h2>
-        <div className='grid lg:grid-cols-5 gap-8'>
-          {/* left */}
-          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
-            <div className='lg:p-4 h-full '>
-              <div>
+        <h2 className='py-1 text-center text-lg'>Get In Touch</h2>
+        <div className='grid lg:grid-cols-5 gap-4'>
+          {/* Left Section */}
+          <div className='col-span-3 lg:col-span-2 shadow-md rounded-lg p-2'>
+            <div className='h-full'>
+              <div className='flex justify-center'>
                 <Image
-                  className='rounded-xl hover:scale-105 ease-in duration-300'
+                  className='rounded-lg hover:scale-105 ease-in duration-300'
                   src={ContactImg}
                   alt='/'
+                  width={240}
+                  height={240}
                 />
               </div>
-              <div>
-                <h2 className='py-2'>Clint Briley</h2>
-                <p>Front-End Developer</p>
-                <p className='py-4'>
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;s talk.
-                </p>
-              </div>
-              <div>
-                <p className='uppercase pt-8'>Connect With Me</p>
-                <div className='flex items-center justify-between py-4'>
+              <h2 className='py-2 text-center text-sm'>Clint Briley</h2>
+              <p className='text-center text-xs'>Front-End Developer</p>
+              <p className='py-2 text-center text-xs'>
+                I am available for freelance or full-time positions. Contact me
+                and let&apos;s talk.
+              </p>
+              <div className='text-center'>
+                <p className='uppercase pt-2 text-xs'>Connect With Me</p>
+                <div className='flex items-center justify-center space-x-2 py-2'>
                   <a
                     href='https://www.linkedin.com/in/clint-briley-50056920a/'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaLinkedinIn />
+                    <div className='rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300'>
+                      <FaLinkedinIn size={16} />
                     </div>
                   </a>
                   <a
@@ -52,93 +51,95 @@ const Contact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaGithub />
+                    <div className='rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300'>
+                      <FaGithub size={16} />
                     </div>
                   </a>
-
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <AiOutlineMail />
+                  <div className='rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300'>
+                    <AiOutlineMail size={16} />
                   </div>
                   <Link href='/resume'>
                     <a>
-                      <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <BsFillPersonLinesFill />
+                      <div className='rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300'>
+                        <BsFillPersonLinesFill size={16} />
                       </div>
                     </a>
                   </Link>
+                </div>
+                {/* CV Download Button */}
+                <div className='py-4'>
+                  <a
+                    href='/assets/Muhammad Muzamil06.pdf'
+                    download
+                    className='inline-block bg-[#5651e5] text-white p-2 px-4 rounded-md text-xs hover:bg-[#4340d0] transition ease-in-out duration-300'
+                  >
+                    Download CV
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* right */}
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
-            <div className='p-4'>
-              <form
-                action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
-                method='POST'
-                encType='multipart/form-data'
-              >
-                <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
-                    <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                      name='name'
-                    />
-                  </div>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
-                      Phone Number
-                    </label>
-                    <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                      name='phone'
-                    />
-                  </div>
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Email</label>
+          {/* Right Section (Contact Form) */}
+          <div className='col-span-3 shadow-md rounded-lg p-2'>
+            <form
+              action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
+              method='POST'
+              encType='multipart/form-data'
+            >
+              <div className='grid grid-cols-1 gap-2'>
+                <div className='flex flex-col'>
+                  <label className='uppercase text-xs py-1'>Name</label>
                   <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
+                    className='border rounded-md p-1 text-xs border-gray-300'
+                    type='text'
+                    name='name'
+                  />
+                </div>
+                <div className='flex flex-col'>
+                  <label className='uppercase text-xs py-1'>Phone Number</label>
+                  <input
+                    className='border rounded-md p-1 text-xs border-gray-300'
+                    type='text'
+                    name='phone'
+                  />
+                </div>
+                <div className='flex flex-col'>
+                  <label className='uppercase text-xs py-1'>Email</label>
+                  <input
+                    className='border rounded-md p-1 text-xs border-gray-300'
                     type='email'
                     name='email'
                   />
                 </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Subject</label>
+                <div className='flex flex-col'>
+                  <label className='uppercase text-xs py-1'>Subject</label>
                   <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
+                    className='border rounded-md p-1 text-xs border-gray-300'
                     type='text'
                     name='subject'
                   />
                 </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Message</label>
+                <div className='flex flex-col'>
+                  <label className='uppercase text-xs py-1'>Message</label>
                   <textarea
-                    className='border-2 rounded-lg p-3 border-gray-300'
-                    rows={10}
+                    className='border rounded-md p-1 text-xs border-gray-300'
+                    rows={4}
                     name='message'
                   ></textarea>
                 </div>
-                <button className='w-full p-4 text-gray-100 mt-4'>
-                  Send Message
-                </button>
-              </form>
-            </div>
+              </div>
+              <button className='w-full bg-[#5651e5] text-white p-2 mt-3 rounded-md text-sm'>
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
-        <div className='flex justify-center py-12'>
+        <div className='flex justify-center py-6'>
           <Link href='/'>
             <a>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                <HiOutlineChevronDoubleUp
-                  className='text-[#5651e5]'
-                  size={30}
-                />
+              <div className='rounded-full shadow-md p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={20} />
               </div>
             </a>
           </Link>
@@ -149,3 +150,5 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
+

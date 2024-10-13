@@ -15,8 +15,8 @@ const Main: React.FC = () => {
     >
       <div className="max-w-[1240px] mx-auto px-4 py-8 flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-12">
         {/* Left Column: Text Content */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <p className="uppercase text-xs sm:text-sm tracking-[0.15em] text-[#6A1B9A] animate-fade-in mt-20 sm:mt-16">
+        <div className="w-full md:w-1/2 text-center md:text-left pt-16 md:pt-24">
+          <p className="hidden sm:block uppercase text-xs sm:text-sm tracking-[0.15em] text-[#6A1B9A] animate-fade-in">
             Let's Build Something Amazing Together
           </p>
           <h1 className="py-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937] animate-slide-left">
@@ -28,7 +28,7 @@ const Main: React.FC = () => {
           <p className="py-4 text-gray-600 max-w-[90%] mx-auto text-base md:mx-0 animate-fade-in delay-150">
             Focused on building responsive, user-friendly web applications with a flair for integrating back-end technologies.
           </p>
-          <button className="mt-6 px-5 py-3 rounded-full text-white bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1] hover:from-[#4B6CC1] hover:to-[#6A1B9A] transition duration-300 ease-in-out animate-fade-in delay-300">
+          <button className="mt-6 px-5 py-3 rounded-full bg-[#5651e5] text-white hover:bg-[#4340d0] transition duration-300 ease-in-out animate-fade-in delay-300">
             Contact Me
           </button>
 
@@ -68,8 +68,8 @@ const Main: React.FC = () => {
         </div>
 
         {/* Right Column: Profile Avatar */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1] rounded-full animate-float overflow-hidden">
+        <div className="w-full md:w-1/2 flex  justify-center md:justify-end">
+          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1] rounded-full animate-float overflow-hidden ">
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src={avatar}

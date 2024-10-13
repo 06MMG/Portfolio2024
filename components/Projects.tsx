@@ -1,51 +1,50 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
-import cryptoImg from '../public/assets/projects/crypto.jpg';
-import netflixImg from '../public/assets/projects/netflix.jpg';
-import twitchImg from '../public/assets/projects/twitch.jpg';
+import msstudio from '../public/assets/projects/ms.png'
+import sawar from '../public/assets/projects/sawar.png'
+import emr from '../public/assets/emr/emr.png'
+import foodswap from '../public/assets/foodswap/home.png'
 import ProjectItem from './ProjectItem';
 
 const Projects: React.FC = () => {
   return (
     <div id='projects' className='w-full py-20 bg-[#f8f9fa]'>
       <div className='max-w-[1240px] mx-auto px-6'>
+        {/* Header Section */}
         <p className='text-2xl tracking-widest uppercase text-[#709dff]'>
           Projects
         </p>
         <h2 className='py-6 text-4xl font-bold text-[#333]'>
           What I&apos;ve Built
         </h2>
-        <div className='grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-          <div className='row-span-2'>
-            <ProjectItem
-              title='Property Finder'
-              backgroundImg={propertyImg}
-              projectUrl='/property'
-              tech='React JS'
-            />
-          </div>
+
+        {/* Projects Grid */}
+        <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
           <ProjectItem
-            title='Crypto App'
-            backgroundImg={cryptoImg}
+            title='Malik Studio'
+            backgroundImg={msstudio}
+            projectUrl='/property'
+            tech='React JS'
+          />
+          <ProjectItem
+            title='Sawar Digital'
+            backgroundImg={sawar}
             projectUrl='/crypto'
             tech='React JS'
           />
           <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
+            title='Electric Medical Record'
+            backgroundImg={emr}
             projectUrl='/netflix'
             tech='React JS'
           />
-          <div className='col-span-2'>
-            <ProjectItem
-              title='Twitch UI'
-              backgroundImg={twitchImg}
-              projectUrl='/twitch'
-              tech='Next JS'
-            />
-          </div>
+          <ProjectItem
+            title='Food Swap'
+            backgroundImg={foodswap}
+            projectUrl='/twitch'
+            tech='React-Native JS'
+          />
         </div>
       </div>
     </div>
