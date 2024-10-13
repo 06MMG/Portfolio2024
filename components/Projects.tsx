@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
 import React from 'react';
 import msstudio from '../public/assets/projects/ms.png'
 import sawar from '../public/assets/projects/sawar.png'
@@ -24,13 +23,13 @@ const Projects: React.FC = () => {
           <ProjectItem
             title='Malik Studio'
             backgroundImg={msstudio}
-            projectUrl='/property'
+            projectUrl='/msstudio'
             tech='React JS'
           />
           <ProjectItem
             title='Sawar Digital'
             backgroundImg={sawar}
-            projectUrl='/crypto'
+            projectUrl='/sawar'
             tech='React JS'
           />
           <ProjectItem
@@ -42,7 +41,7 @@ const Projects: React.FC = () => {
           <ProjectItem
             title='Food Swap'
             backgroundImg={foodswap}
-            projectUrl='/twitch'
+            projectUrl='/foodswap'
             tech='React-Native JS'
           />
         </div>

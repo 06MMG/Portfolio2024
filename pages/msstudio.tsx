@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
+import ms from '../public/assets/projects/ms.png'
 import { RiRadioButtonFill } from 'react-icons/ri';
-import Link from 'next/link';
 import ProjectDetails from '../components/ProjectDetails';
 
-const property:React.FC = () => {
+const Malikstudio:React.FC = () => {
   return (
     <ProjectDetails
-      title="Property Finders"
+      title="Malik Studio"
       description="This app was built using React JS and is hosted on Firebase. Users
         are able to search properties based on an Address, City, or ZIP code
         to retrieve a list of active properties currently for sale. You will
@@ -22,13 +21,10 @@ const property:React.FC = () => {
         'Tailwind',
         'JavaScript',
         'Firebase',
-        'Google API',
-        'Zillow API',
       ]}
-      image={propertyImg}
-      codeLink="https://github.com/fireclint/property-finder"
-      demoLink="https://property-finder-development.web.app/"
+      image={ms}
+      LiveLink="https://www.malikstudio.com/"
     />
   );
 };
-export default property;
+export default Malikstudio;
