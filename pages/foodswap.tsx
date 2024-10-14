@@ -25,7 +25,7 @@ const Foodswap: React.FC = () => {
         'Python',
         'Django',
       ]}
-      image={foodswap}
+      coverImages={[foodswap,foodswap2,foodswap1]}
       extraImages={[foodswap, foodswap1, foodswap2]}
       LiveLink="https://www.sawardigital.com/"
     />

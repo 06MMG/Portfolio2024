@@ -22,7 +22,7 @@ const Malikstudio:React.FC = () => {
         'JavaScript',
         'Firebase',
       ]}
-      image={ms}
+      coverImages={[ms]}
       LiveLink="https://www.malikstudio.com/"
     />
   );

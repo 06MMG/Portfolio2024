@@ -21,7 +21,7 @@ const Sawar:React.FC = () => {
       'JavaScript',
       'Firebase',
     ]}
-    image={sawar}
+    coverImages={[sawar]}
     LiveLink="https://www.sawardigital.com/"
   />
 );
