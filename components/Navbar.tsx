@@ -5,7 +5,6 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import avatar from '../public/assets/avatar.jpg';
-import navlogo from '../public/assets/navLogo.png'
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<boolean>(false);
@@ -129,11 +128,6 @@ const Navbar: React.FC = () => {
               <Link href='/#projects'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Projects
-                </li>
-              </Link>
-              <Link href='/resume'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Resume
                 </li>
               </Link>
               <Link href='/#contact'>

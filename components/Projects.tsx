@@ -5,21 +5,25 @@ import sawar from '../public/assets/projects/sawar.png'
 import emr from '../public/assets/emr/emr.png'
 import foodswap from '../public/assets/foodswap/home.png'
 import ProjectItem from './ProjectItem';
+import ScrollReveal from './ScrollReveal';
 
 const Projects: React.FC = () => {
   return (
     <div id='projects' className='w-full py-20 bg-[#f8f9fa]'>
       <div className='max-w-[1240px] mx-auto px-6'>
         {/* Header Section */}
+        <ScrollReveal>
         <p className='text-2xl tracking-widest uppercase text-[#709dff]'>
           Projects
         </p>
         <h2 className='py-6 text-4xl font-bold text-[#333]'>
           What I&apos;ve Built
         </h2>
+        </ScrollReveal>
 
         {/* Projects Grid */}
-        <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
+       
+        <ScrollReveal className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
           <ProjectItem
             title='Malik Studio'
             backgroundImg={msstudio}
@@ -44,7 +48,7 @@ const Projects: React.FC = () => {
             projectUrl='/foodswap'
             tech='React-Native JS'
           />
-        </div>
+        </ScrollReveal>
       </div>
     </div>
   );

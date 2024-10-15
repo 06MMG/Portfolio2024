@@ -91,11 +91,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           {/* Technologies Used */}
           <div className="shadow-lg p-6 rounded-xl bg-white">
             <h3 className="text-xl font-semibold mb-4 text-center">Technologies Used</h3>
-            <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
+            <div className="flex flex-wrap gap-2 md:flex-col md:gap-4">
               {technologies.map((tech, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <RiRadioButtonFill className="text-blue-600" />
-                  <span className="text-gray-600">{tech}</span>
+                <div
+                  key={index}
+                  className="flex items-center space-x-2 w-full md:w-auto break-words"
+                >
+                  <RiRadioButtonFill className="text-blue-600 min-w-[20px]" />
+                  <span className="text-gray-600 text-sm md:text-base break-words">
+                    {tech}
+                  </span>
                 </div>
               ))}
             </div>
@@ -124,13 +129,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       )}
 
       {/* Back to Projects Link */}
-      {LiveLink && (
-        <div className="text-center py-8">
-          <Link href="/#projects">
-            <a className="text-blue-600 underline hover:text-blue-800 transition">Back to Projects</a>
-          </Link>
-        </div>
-      )}
+
+      <div className="text-center py-8">
+        <Link href="/#projects">
+          <a className="text-blue-600 underline hover:text-blue-800 transition">Back to Projects</a>
+        </Link>
+      </div>
     </div>
   );
 };
