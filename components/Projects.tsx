@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
           <ProjectItem
             title='Electric Medical Record'
             backgroundImg={emr}
-            projectUrl='/netflix'
+            projectUrl='/emr'
             tech='React JS'
           />
           <ProjectItem

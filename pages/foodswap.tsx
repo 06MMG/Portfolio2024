@@ -1,10 +1,8 @@
-import Image from 'next/image';
+
 import React from 'react';
 import foodswap from '../public/assets/foodswap/home.png'
 import foodswap1 from '../public/assets/foodswap/leaderboard.png'
 import foodswap2 from '../public/assets/foodswap/sidebar.png'
-import { RiRadioButtonFill } from 'react-icons/ri';
-import Link from 'next/link';
 import ProjectDetails from '../components/ProjectDetails';
 
 const Foodswap: React.FC = () => {
@@ -27,7 +25,6 @@ const Foodswap: React.FC = () => {
       ]}
       coverImages={[foodswap,foodswap2,foodswap1]}
       extraImages={[foodswap, foodswap1, foodswap2]}
-      LiveLink="https://www.sawardigital.com/"
     />
   );
 };

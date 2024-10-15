@@ -1,7 +1,6 @@
 
 import React from 'react';
 import sawar from '../public/assets/projects/sawar.png'
-import { RiRadioButtonFill } from 'react-icons/ri';
 import ProjectDetails from '../components/ProjectDetails';
 
 const Sawar:React.FC = () => {

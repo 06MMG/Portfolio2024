@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import ms from '../public/assets/projects/ms.png'
-import { RiRadioButtonFill } from 'react-icons/ri';
 import ProjectDetails from '../components/ProjectDetails';
 
 const Malikstudio:React.FC = () => {

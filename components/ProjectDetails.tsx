@@ -15,7 +15,7 @@ interface ProjectDetailsProps {
   technologies: string[];
   coverImages: StaticImageData[];
   extraImages?: StaticImageData[];
-  LiveLink: string;
+  LiveLink?: string;
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
@@ -62,11 +62,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           <p className="text-lg md:text-xl max-w-lg mb-6">
             Explore our cutting-edge projects and immerse yourself in the journey.
           </p>
-          <a href={LiveLink} target="_blank" rel="noreferrer">
-            <button className="px-8 py-3 bg-white text-black rounded-full shadow-md hover:bg-gray-300 transition">
-              View Live
-            </button>
-          </a>
+          {LiveLink && (
+            <a href={LiveLink} target="_blank" rel="noreferrer">
+              <button className="px-8 py-3 bg-white text-black rounded-full shadow-md hover:bg-gray-300 transition">
+                View Live
+              </button>
+            </a>
+          )}
         </div>
       </div>
 
@@ -77,11 +79,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           <div className="md:col-span-3">
             <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
             <p className="text-lg text-gray-700 mb-6">{description}</p>
-            <a href={LiveLink} target="_blank" rel="noreferrer">
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                Visit Project
-              </button>
-            </a>
+            {LiveLink && (
+              <a href={LiveLink} target="_blank" rel="noreferrer">
+                <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                  Visit Project
+                </button>
+              </a>
+            )}
           </div>
 
           {/* Technologies Used */}
@@ -120,11 +124,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       )}
 
       {/* Back to Projects Link */}
-      <div className="text-center py-8">
-        <Link href="/#projects">
-          <a className="text-blue-600 underline hover:text-blue-800 transition">Back to Projects</a>
-        </Link>
-      </div>
+      {LiveLink && (
+        <div className="text-center py-8">
+          <Link href="/#projects">
+            <a className="text-blue-600 underline hover:text-blue-800 transition">Back to Projects</a>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
