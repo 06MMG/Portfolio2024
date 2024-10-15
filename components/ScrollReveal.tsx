@@ -20,10 +20,14 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
 }) => {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement>(null);
+  const mountedRef = useRef<boolean>(false); // To track if the component is mounted
 
   useEffect(() => {
+    mountedRef.current = true; // Set to true when the component mounts
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!mountedRef.current) return; // Check if mounted
         if (entry.isIntersecting) {
           controls.start('visible');
         } else {
@@ -33,10 +37,11 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       { threshold }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (ref.current) observer.observe(ref.current); // Only observe if ref is available
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      mountedRef.current = false; // Set to false when the component unmounts
+      if (ref.current) observer.unobserve(ref.current); // Clean up the observer
     };
   }, [controls, threshold]);
 
