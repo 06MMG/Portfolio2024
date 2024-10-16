@@ -7,13 +7,7 @@ const Sawar:React.FC = () => {
   return (
     <ProjectDetails
     title="Sawar Digital"
-    description=" I built this application in React JS and is hosted on GitHub pages.
-            This app features user authentication with firebase as well as the
-            firestore cloud storage database. This application is pulling movie
-            data from an the IMDB movie API and displaying different categories.
-            It features horizontal sliding and a featured selection. The
-            useContext hook is also being implemented for app-wide state
-            management."
+    description=" SawarDigital is a dynamic website offering a wide range of digital services, including SEO optimization, data strategy development, data analytics solutions, and custom software development. Our goal is to empower businesses with innovative digital tools and insights, helping them grow, streamline operations, and make data-driven decisions. With a focus on cutting-edge technology and tailored solutions, we deliver exceptional results to meet the unique needs of every client."
     technologies={[
       'React',
       'Tailwind',

@@ -13,13 +13,7 @@ const Emr: React.FC = () => {
   return (
     <ProjectDetails
       title="Electic Medical System"
-      description=" I built this application in React JS and is hosted on GitHub pages.
-          This app features user authentication with firebase as well as the
-          firestore cloud storage database. This application is pulling movie
-          data from an the IMDB movie API and displaying different categories.
-          It features horizontal sliding and a featured selection. The
-          useContext hook is also being implemented for app-wide state
-          management."
+      description=" Our EMR (Electronic Medical Record) web app is a comprehensive healthcare management system designed for hospitals. It streamlines workflows by providing a centralized platform for all staff, including doctors, nurses, lab technicians, radiologists, pharmacists, and medical assistants. The system enables seamless access to patient records, lab results, prescriptions, and imaging reports, ensuring real-time collaboration and improved patient care. With features like appointment scheduling, medication tracking, and automated reporting, our EMR app enhances efficiency, reduces errors, and supports better decision-making across the entire hospital ecosystem."
       technologies={[
         'React',
         'Tailwind Css',

@@ -9,13 +9,7 @@ const Foodswap: React.FC = () => {
   return (
     <ProjectDetails
       title="Food Swap"
-      description=" I built this application in React JS and is hosted on GitHub pages.
-            This app features user authentication with firebase as well as the
-            firestore cloud storage database. This application is pulling movie
-            data from an the IMDB movie API and displaying different categories.
-            It features horizontal sliding and a featured selection. The
-            useContext hook is also being implemented for app-wide state
-            management."
+      description=" Our app is a fun and engaging platform designed for sharing and donating food. Whether you want to share meals with friends or help those in need, the app makes it easy and rewarding. Through gamification, users can earn Foodiez points every time they donate or share food, which can unlock badges and rewards. The app fosters a sense of community by encouraging generosity while making food-sharing a social and enjoyable experience. Join us to make a positive impact, reduce waste, and spread happiness—one meal at a time!"
       technologies={[
         'React-Native',
         'CSS-StyleSheets',

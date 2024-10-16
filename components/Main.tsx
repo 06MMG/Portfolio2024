@@ -17,34 +17,36 @@ const Main: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-4 py-8 flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-12">
 
         {/* Left Column: Text Content */}
-        <ScrollReveal className="w-full md:w-1/2 text-center md:text-left pt-16 md:pt-24">
-          <p className="hidden sm:block uppercase text-xs sm:text-sm tracking-[0.15em] text-[#6A1B9A]">
-            Let's Build Something Amazing Together
-          </p>
-          <h1 className="py-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937]">
-            Hi, I'm{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1]">
-              Muzamil
-            </span>
-          </h1>
-          <h2 className="py-2 text-xl sm:text-2xl md:text-3xl font-light text-[#374151]">
-            A Passionate Front-End Web Developer
-          </h2>
-          <p className="py-4 text-gray-600 max-w-[90%] mx-auto text-base md:mx-0">
-            Focused on building responsive, user-friendly web applications with a flair for integrating back-end technologies.
-          </p>
+        <div className="w-full md:w-1/2 text-center md:text-left pt-16 md:pt-24">
+          <ScrollReveal>
+            <p className="hidden sm:block uppercase text-xs sm:text-sm tracking-[0.15em] text-[#6A1B9A]">
+              Let's Build Something Amazing Together
+            </p>
+            <h1 className="py-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937]">
+              Hi, I'm{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6A1B9A] to-[#4B6CC1]">
+                Muzamil
+              </span>
+            </h1>
+            <h2 className="py-2 text-xl sm:text-2xl md:text-3xl font-light text-[#374151]">
+              A Passionate Front-End Web Developer
+            </h2>
+            <p className="py-4 text-gray-600 max-w-[90%] mx-auto text-base md:mx-0">
+              Focused on building responsive, user-friendly web applications with a flair for integrating back-end technologies.
+            </p>
+          </ScrollReveal>
           <button className="mt-6 px-5 py-3 rounded-full bg-[#5651e5] text-white hover:bg-[#4340d0] transition duration-300 ease-in-out">
             Contact Me
           </button>
 
           {/* Social Media Icons */}
           <div className="flex items-center justify-center md:justify-start space-x-4 mt-6">
-            <Link href="https://www.linkedin.com/in/clint-briley-50056920a/" target="_blank" rel="noreferrer">
+            <Link href="https://www.linkedin.com/in/muzamil-mmg-a1422726a/" target="_blank" rel="noreferrer">
               <div className="rounded-full bg-white shadow-lg p-4 hover:bg-[#4B6CC1] group-hover:scale-110 group-hover:rotate-12 ease-in-out duration-300">
                 <FaLinkedinIn className="text-[#4B6CC1] group-hover:text-white" />
               </div>
             </Link>
-            <Link href="https://github.com/fireclint" target="_blank" rel="noreferrer">
+            <Link href="https://github.com/06MMG" target="_blank" rel="noreferrer">
               <div className="rounded-full bg-white shadow-lg p-4 hover:bg-[#4B6CC1] group-hover:scale-110 group-hover:rotate-12 ease-in-out duration-300">
                 <FaGithub className="text-[#4B6CC1] group-hover:text-white" />
               </div>
@@ -55,7 +57,8 @@ const Main: React.FC = () => {
               </div>
             </Link>
           </div>
-        </ScrollReveal>
+        </div>
+
 
         {/* Right Column: Profile Avatar */}
         <ScrollReveal className="w-full md:w-1/2 flex justify-center md:justify-end">

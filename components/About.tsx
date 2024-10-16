@@ -40,10 +40,10 @@ const About: React.FC = () => {
             Crafting <span className="text-[#FFD700]">Unique</span> & Engaging Web Experiences
           </h2>
           <p className="text-lg">
-            I specialize in building visually captivating front-end experiences that blend creativity with cutting-edge technology. From single-page apps to fully interactive websites, I focus on performance, responsiveness, and modern design.
+            I craft visually striking front-end experiences where creativity meets innovation. Whether it's sleek single-page apps or fully immersive websites, my work emphasizes seamless performance, responsive design, and modern aesthetics that leave a lasting impact.
           </p>
           <p className="text-lg">
-            My journey began in 2013, working on multiple e-commerce platforms. Since then, I’ve mastered various tech stacks, and love creating digital products that delight users and clients alike.
+            My journey as a front-end developer began in 2023, the same year I earned my degree in Computer Science. Since then, I've honed my skills across diverse tech stacks, focusing on crafting seamless, interactive digital products that engage users and exceed client expectations.
           </p>
 
           <Link href="/#projects">

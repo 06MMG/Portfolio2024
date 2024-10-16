@@ -23,49 +23,55 @@ const Contact: React.FC = () => {
 
         <div className="grid lg:grid-cols-5 gap-4">
           {/* Left Section */}
-          <ScrollReveal className="col-span-3 lg:col-span-2 shadow-md rounded-lg p-2">
+          <div className="col-span-3 lg:col-span-2 shadow-md rounded-lg p-2">
             <div className="h-full">
-              <div className="flex justify-center">
-                <Image
-                  className="rounded-lg hover:scale-105 ease-in duration-300"
-                  src={ContactImg}
-                  alt="/"
-                  width={240}
-                  height={240}
-                />
-              </div>
-              <h2 className="py-2 text-center text-sm">Clint Briley</h2>
-              <p className="text-center text-xs">Front-End Developer</p>
-              <p className="py-2 text-center text-xs">
-                I am available for freelance or full-time positions. Contact me
-                and let&apos;s talk.
-              </p>
+              <ScrollReveal>
+                <div className="flex justify-center">
+                  <Image
+                    className="rounded-lg hover:scale-105 ease-in duration-300"
+                    src={ContactImg}
+                    alt="/"
+                    width={240}
+                    height={240}
+                  />
+                </div>
+              </ScrollReveal>
+              <ScrollReveal>
+                <h2 className="py-2 text-center text-sm">Clint Briley</h2>
+                <p className="text-center text-xs">Front-End Developer</p>
+                <p className="py-2 text-center text-xs">
+                  I am available for freelance or full-time positions. Contact
+                  me and let&apos;s talk.
+                </p>
+              </ScrollReveal>
 
               <div className="text-center">
-                <p className="uppercase pt-2 text-xs">Connect With Me</p>
-                <div className="flex items-center justify-center space-x-2 py-2">
-                  <a
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                <ScrollReveal>
+                  <p className="uppercase pt-2 text-xs">Connect With Me</p>
+                  <div className="flex items-center justify-center space-x-2 py-2">
+                    <a
+                      href="https://www.linkedin.com/in/muzamil-mmg-a1422726a/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300">
+                        <FaLinkedinIn size={16} />
+                      </div>
+                    </a>
+                    <a
+                      href="https://github.com/06MMG"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300">
+                        <FaGithub size={16} />
+                      </div>
+                    </a>
                     <div className="rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300">
-                      <FaLinkedinIn size={16} />
+                      <AiOutlineMail size={16} />
                     </div>
-                  </a>
-                  <a
-                    href="https://github.com/fireclint"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300">
-                      <FaGithub size={16} />
-                    </div>
-                  </a>
-                  <div className="rounded-full shadow-md p-2 hover:scale-105 ease-in duration-300">
-                    <AiOutlineMail size={16} />
                   </div>
-                </div>
+                </ScrollReveal>
 
                 {/* CV Download Button */}
                 <div className="py-4">
@@ -78,8 +84,9 @@ const Contact: React.FC = () => {
                   </a>
                 </div>
               </div>
+
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Right Section (Contact Form) */}
           <ScrollReveal className="col-span-3 shadow-md rounded-lg p-2">

@@ -7,14 +7,7 @@ const Malikstudio:React.FC = () => {
   return (
     <ProjectDetails
       title="Malik Studio"
-      description="This app was built using React JS and is hosted on Firebase. Users
-        are able to search properties based on an Address, City, or ZIP code
-        to retrieve a list of active properties currently for sale. You will
-        be able to view property information as well as the specific
-        location of the property integrated with the Google Maps API. User
-        authentication is available so you can signup and signin to your
-        account with an email address in order to save your favorite
-        properties. This is made possible with Zillow API."
+      description="This website was built using React JS and its Backend in Firebase is hosted on Hostinger. It serves as the online platform for my video editing company, offering a range of services including long-form video editing, YouTube shorts, cinematic trailers, and more. Users can explore Company portfolio, view detailed service packages, and easily integrated contact forms. The site also features seamless navigation with a responsive design, ensuring a smooth experience across all devices."
       technologies={[
         'React',
         'Tailwind',
