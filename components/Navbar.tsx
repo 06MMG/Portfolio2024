@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import avatar from '../public/assets/avatar.jpg';
+import avatar from '../public/assets/avatar.png';
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<boolean>(false);

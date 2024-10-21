@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import avatar from '../public/assets/avatar.jpg';
+import avatar from '../public/assets/avatar.png';
 import ScrollReveal from './ScrollReveal';
 
 
