@@ -4,6 +4,8 @@ import msstudio from '../public/assets/projects/ms.png'
 import sawar from '../public/assets/projects/sawar.png'
 import emr from '../public/assets/emr/emr.png'
 import foodswap from '../public/assets/foodswap/home.png'
+import forms from '../public/assets/forms/forms.png'
+import gully from '../public/assets/gully/gullycricket .png'
 import ProjectItem from './ProjectItem';
 import ScrollReveal from './ScrollReveal';
 
@@ -47,6 +49,18 @@ const Projects: React.FC = () => {
             backgroundImg={foodswap}
             projectUrl='/foodswap'
             tech='React-Native JS'
+          />
+          <ProjectItem
+            title='Financial Forms'
+            backgroundImg={forms}
+            projectUrl='/forms'
+            tech='React JS'
+          />
+          <ProjectItem
+            title='Gully Premier League'
+            backgroundImg={gully}
+            projectUrl='/gullycricket'
+            tech='React JS'
           />
         </ScrollReveal>
       </div>
