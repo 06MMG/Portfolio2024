@@ -15,7 +15,6 @@ const Malikstudio:React.FC = () => {
         'PhP Scripts Backend',
       ]}
       coverImages={[gully]}
-      LiveLink="https://gullycricket.malikstudio.com/home"
     />
   );
 };

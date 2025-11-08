@@ -15,7 +15,6 @@ const Malikstudio:React.FC = () => {
         'Firebase',
       ]}
       coverImages={[ms]}
-      LiveLink="https://www.malikstudio.com/"
     />
   );
 };

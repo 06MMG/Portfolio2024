@@ -6,6 +6,7 @@ import emr from '../public/assets/emr/emr.png'
 import foodswap from '../public/assets/foodswap/home.png'
 import forms from '../public/assets/forms/forms.png'
 import gully from '../public/assets/gully/gullycricket .png'
+import Dentist from '../public/assets/dentist/dentist.png';
 import ProjectItem from './ProjectItem';
 import ScrollReveal from './ScrollReveal';
 
@@ -60,6 +61,12 @@ const Projects: React.FC = () => {
             title='Gully Premier League'
             backgroundImg={gully}
             projectUrl='/gullycricket'
+            tech='React JS'
+          />
+            <ProjectItem
+            title='Dentist Website'
+            backgroundImg={Dentist}
+            projectUrl='Dentist'
             tech='React JS'
           />
         </ScrollReveal>
