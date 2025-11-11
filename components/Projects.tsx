@@ -13,7 +13,7 @@ import ScrollReveal from './ScrollReveal';
 const Projects: React.FC = () => {
   return (
     <div id='projects' className='w-full py-20 bg-[#f8f9fa]'>
-      <div className='max-w-[1240px] mx-auto px-6'>
+      <div className='max-w-[1240px] mx-auto px-4 sm:px-6'>
         {/* Header Section */}
         <ScrollReveal>
         <p className='text-2xl tracking-widest uppercase text-[#709dff]'>
@@ -26,7 +26,10 @@ const Projects: React.FC = () => {
 
         {/* Projects Grid */}
        
-        <ScrollReveal className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
+       <ScrollReveal
+  className='grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 md:gap-12 place-items-center'
+>
+
           <ProjectItem
             title='Malik Studio'
             backgroundImg={msstudio}
