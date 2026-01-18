@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                 {/* CV Download Button */}
                 <div className="py-4">
                   <a
-                    href="/assets/Muhammad Muzamil06.pdf"
+                    href="/assets/Muzamil06.pdf"
                     download
                     className="inline-block bg-[#5651e5] text-white p-2 px-4 rounded-md text-xs hover:bg-[#4340d0] transition ease-in-out duration-300"
                   >
