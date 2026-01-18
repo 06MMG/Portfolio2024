@@ -15,7 +15,7 @@ const Sawar:React.FC = () => {
       'Firebase',
     ]}
     coverImages={[sawar]}
-    LiveLink="https://www.sawardigital.com/"
+    LiveLink="https://sawar-chi.vercel.app"
   />
 );
 };
